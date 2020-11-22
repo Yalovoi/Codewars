@@ -1,4 +1,5 @@
-[Show multiples of 2 numbers within a range](https://www.codewars.com/kata/583989556754d6f4c700018e/train/javascript)
+//https://www.codewars.com/kata/583989556754d6f4c700018e/train/javascript
+
 function multiples(s1,s2,s3){
    let arr = [];
   for (let i = 1; i < s3; i++){
