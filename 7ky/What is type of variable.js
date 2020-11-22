@@ -1,4 +1,11 @@
-https://www.codewars.com/kata/57293671c98f77e84b000065/train/javascript
+www.codewars.com/kata/57293671c98f77e84b000065/train/javascript
+/*
+Create a function to return true type of variable, i.e.
+type([]) => 'array'
+type({}) => 'object'
+type('') => 'string'
+type(NaN) => 'number'
+*/
 function type(value) {
   switch({}.toString.call(value)){
     case "[object Number]":
