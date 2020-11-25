@@ -6,3 +6,4 @@ function well(x){
     return good <= 2 ? 'Publish!' : 'I smell a series!'
   };
 }
+
