@@ -5,3 +5,8 @@ function parseF(s) {
       return null
     }
   }
+
+ 2 Variant
+ function parseF(s){
+   return isNaN(parseFloat(s)) ? null : parseFloat(s);
+ }
