@@ -14,18 +14,41 @@ Note:
 Focus attention on efficiency
 */
 function dblLinear(n) {
-  let x = 1;
-  let y = [];
-  let z = [];
+  // a place to store the sequence
+  const sequence = [1]; // start the sequence with 1
+  const seen = {};
+  // a place to keep track of the length, set to 0
+  let length = 0;
+  // a place to keep track of current x index, set to 0
+  let xIndex = 0;
 
-  for (let i = 0; i < n; i++) {
-    y.push(2 * x + 1);
-    z.push(3 * x + 1);
-    let min = Math.min(y[0], z[0]);
-    if (min === y[0]) x = y.shift();
-    if (min === z[0]) x = z.shift();
+  // while length is less than n
+  while(length < n) {
+    const x = sequence[xIndex];
+    // calculate y given the current x
+    const y = 2 * x + 1;
+    // insert y into the sequence in sorted order
+    if (!seen[y]) {
+      for (var i = sequence.length - 1; i >= 0; i--) {
+        if (sequence[i] < y) {
+          break;
+        }
+      }
+      sequence.splice(i + 1, 0, y);
+      seen[y] = true;
+    }
+    // calcuate z given the current x
+    const z = 3 * x + 1;
+    // insert z into the sequence in sorted order
+    sequence.push(z);
+    seen[z] = true;
+    // increase length
+    length++;
+    // increase x index
+    xIndex++;
   }
-  return x;
+  // return sequence at n
+  return sequence[n];
 }
 
 
