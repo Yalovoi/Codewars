@@ -1,3 +1,4 @@
+//https://www.codewars.com/kata/54d22119beeaaaf663000024/train/javascript
 function shadesOfGrey(n) {
     var shades = [];
   
