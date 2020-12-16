@@ -5,3 +5,7 @@ function index(array, n){
     return Math.pow(array[n], n);
   }
 }
+
+function index(array, n){
+  return array[n] ** n || -1;
+}
