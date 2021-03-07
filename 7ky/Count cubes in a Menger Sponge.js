@@ -6,3 +6,8 @@ function calc_ms(n) {
   }
   return res;
 }
+
+
+function calc_ms(n) {
+  return Math.pow(20, n);
+}
